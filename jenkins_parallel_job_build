@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+    stages {
+        stage ('paralle job') {
+            parallel {
+                stage ('build1'){
+                    steps {
+                        echo 'running job 1'
+                        echo 'first job'
+                    }
+                }
+                stage ('build2') {
+                    steps {
+                        echo 'running job 2'
+                        echo 'second job'
+                    }
+                }
+            }
+        }
+    }
+}

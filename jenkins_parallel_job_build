@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages {
+        stage ('sleep') {
+            steps {
+                sleep 60
+            }
+        }
         stage ('paralle job') {
             parallel {
                 stage ('build1'){

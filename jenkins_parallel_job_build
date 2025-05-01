@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('initial sleep time') {
             steps {
-                sleep 90
+                sleep 120
             }
         }
         stage ('paralle job') {
